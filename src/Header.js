@@ -10,7 +10,6 @@ export default function Header(){
                     <img className="meme-icon" alt="troll face"src="./troll-face.png"/>
                     Meme generator</div>
             </div>
-            <div className="course">React Course Project 3</div>
         </div>
     )
 }

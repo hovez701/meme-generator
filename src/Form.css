@@ -54,9 +54,10 @@ input[type=text]{
 }
 
 .meme--image{
-    max-width: 100%;
+    max-width: 50vw;
+    max-height: 50vh;
     margin: 0px;
-    /* padding: 20px; */
+    padding: 50px;
 
 }
 
