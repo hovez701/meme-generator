@@ -1,0 +1,29 @@
+.navbar{
+    background-image: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px; */
+    color: white;
+}
+
+.meme-icon{
+    padding: 0px 20px;
+    height: 60px;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.course {
+    font-size: 1.6rem;
+    padding-right: 30px;
+}
+
