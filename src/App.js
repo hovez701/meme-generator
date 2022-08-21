@@ -5,7 +5,16 @@ import React from 'react';
 import Memegrid from './Memegrid.js'
 
 function App() {
-  const [memeGrid, setMemeGrid] = React.useState([]);
+  const [memeGrid, setMemeGrid] = React.useState(getLocalStorage());
+
+  function getLocalStorage()
+{
+  const data = JSON.parse(localStorage.getItem('memes'));
+  if(!data)
+    return [];
+
+  return data
+}  
 
   return (
     <div className="container">
@@ -13,6 +22,8 @@ function App() {
       <Form 
       memeGrid = {memeGrid}
       setMemeGrid = {setMemeGrid}
+      // lS={lS}
+      // setLS ={setLs}
       
       />
       <Memegrid

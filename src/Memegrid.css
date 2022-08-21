@@ -4,7 +4,11 @@
     justify-content: center;
     max-width: 100%;
     flex-wrap: wrap;
+    gap: 5px;
 }
+/* .memeGridContainer{
+    margin: 5px;
+} */
 
 h2{
     text-align: center;

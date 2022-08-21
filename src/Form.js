@@ -43,7 +43,7 @@ export default function Form(props){
             ...prevMeme,
             randomImage: url
         }))
-        console.log(meme)
+        // console.log(meme)
         // console.log(props.topText);
     }
 
@@ -52,12 +52,12 @@ export default function Form(props){
         const target = e.target;
         const value = target.type ==='checkbox' ? target.checked : target.value;
         const name = target.name;
-        console.log(value);
+        // console.log(value);
         setMeme(prevMeme =>({
             ...prevMeme,
-            [name]: target.value, // ensures the right state value is updated.
+            [name]: value, // ensures the right state value is updated.
         }))
-        console.log(meme)
+        // console.log(meme)
     }
 
     function saveMeme(e){
@@ -65,15 +65,15 @@ export default function Form(props){
         props.setMemeGrid(
             [...props.memeGrid, meme]
         )
-        
-        // console.log(props.memeGrid)
+        console.log(props.memeGrid)
+        // save in local storage
+        localStorage.setItem('memes', JSON.stringify( [...props.memeGrid, meme]))
     }
 
     return (
         <div className="form--container">
             <form>
                 <button className="get-new-meme"onClick={newMeme}>Get a new meme image</button>
-                <label>Add meme text</label>
                 <input name="topText" placeholder="Top text" className="top-text"  type="text" onChange={handleChange}></input>
                 <input name="bottomText" placeholder="Bottom text" className="bottom-text"  type="text" onChange={handleChange}></input>
                 <button className="save-meme"onClick={saveMeme}>Save meme</button>
