@@ -73,9 +73,10 @@ export default function Form(props){
     return (
         <div className="form--container">
             <form>
-                <button className="get-new-meme"onClick={newMeme}>Get a new meme image</button>
-                <input name="topText" placeholder="Top text" className="top-text"  type="text" onChange={handleChange}></input>
-                <input name="bottomText" placeholder="Bottom text" className="bottom-text"  type="text" onChange={handleChange}></input>
+                <div className="form--heading">Generate a Meme</div>
+                <button className="get-new-meme"onClick={newMeme}>Get a meme image</button>
+                <input name="topText" placeholder="Add top text" className="top-text"  type="text" onChange={handleChange}></input>
+                <input name="bottomText" placeholder="Add bottom text" className="bottom-text"  type="text" onChange={handleChange}></input>
                 <button className="save-meme"onClick={saveMeme}>Save meme</button>
             </form>
             <div className="meme--container">

@@ -6,10 +6,26 @@
     flex-wrap: wrap;
     gap: 5px;
 }
-/* .memeGridContainer{
+.memeGridContainer{
     margin: 5px;
-} */
+    position: relative;
+
+}
 
 h2{
     text-align: center;
+}
+
+.memeGrid--heading{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 6px;
+}
+
+
+.memeGrid--button{
+    text-align: center;
+    margin: 0 auto;
+    /* float: right; */
 }
