@@ -20,17 +20,17 @@ export default function Form(props){
             .then(data => setAllMemes(data.data.memes))
     }, []);
 
-    //async version
-    React.useEffect( () =>
-    {
-        async function getMemes(){
-            const res = await fetch("https://api.imgflip.com/get_memes");
-            const data = await res.json();
-            setAllMemes(data.data.memes);
+    // //async version
+    // React.useEffect( () =>
+    // {
+    //     async function getMemes(){
+    //         const res = await fetch("https://api.imgflip.com/get_memes");
+    //         const data = await res.json();
+    //         setAllMemes(data.data.memes);
 
-        }
-        getMemes()
-    }, [])
+    //     }
+    //     getMemes()
+    // }, [])
 
     function newMeme(e){
         e.preventDefault()
@@ -66,6 +66,7 @@ export default function Form(props){
             [...props.memeGrid, meme]
         )
         console.log(props.memeGrid)
+
         // save in local storage
         localStorage.setItem('memes', JSON.stringify( [...props.memeGrid, meme]))
     }

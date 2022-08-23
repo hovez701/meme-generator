@@ -22,9 +22,6 @@ function App() {
       <Form 
       memeGrid = {memeGrid}
       setMemeGrid = {setMemeGrid}
-      // lS={lS}
-      // setLS ={setLs}
-      
       />
       <Memegrid
       memeGrid = {memeGrid}
